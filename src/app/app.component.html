@@ -1,0 +1,27 @@
+<!-- String Interpolation -->
+<header><h1>{{title}}</h1></header>
+<table class="table table-bordered">
+  <!-- *ngFor loop to display array of menu objects -->
+  <tr *ngFor = 'let foodItem of foodMenu' [class.feature]= "foodItem.feature">
+    <td><img [src]="foodItem.image"></td>
+    <td><h3>{{foodItem.item | uppercase }}</h3>
+    <p>{{foodItem.description}}</p>
+    <!-- *ngIf to select which condition to display based amount in cart -->
+    <h5 id="comment2" *ngIf="foodItem.amount === 0">{{foodItem.comment2}}</h5>
+    <h5 id="comment1" *ngIf="foodItem.amount > 0">{{foodItem.comment1}}</h5></td>
+    <!-- Use PIPES to add correct currency type (EUR) -->
+    <td><p id="price">{{priceText}}{{foodItem.price | currency: 'EUR':true}}</p></td>
+    <!-- increase button  -->
+    <td><button class="increase" type="button" class="btn btn-success" (click)='upQuantity(foodItem)'>+</button>
+      <!-- input  -->
+      <input type="number" [(ngModel)]= "foodItem.amount">
+      <!-- decrease button  -->
+      <button class="decrease" type="button" class="btn btn-danger" (click)='lowerQuantity(foodItem)'>-</button>
+      <!-- <button type="button" class="btn btn-success">Success</button> -->
+    </td>
+  </tr>
+</table>
+<p>Note: You currently have {{totalItems()}} items in your cart</p>
+<h4>Your total is: {{totalPrice() | currency: 'EUR':true}}</h4>
+<footer><p><a href="https://www.onlyfans.com" target="blank">For digital menus contact us today</a></p></footer>
+<router-outlet></router-outlet>

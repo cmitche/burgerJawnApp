@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+header{
+    background-color: rgb(0, 0, 36);
+    padding: 30px;
+}
+header h1{
+    margin-top: 30px;
+    color: white;
+    text-align: center;
+    font-family: ‘Black Han Sans’, sans-serif;
+  }
+table {
+    margin-top: 50px;
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+  td {
+      border: 1.5px solid black;
+      text-align: left;
+      padding: 8px;
+    }
+  .feature{
+    background-color: yellow;
+  }
+  img{
+    height: 100px;
+}
+  #price{
+    text-align: center;
+    color: green;
+  }
+  #comment1, #comment2{
+  font-weight: bold;
+  }
+  #comment2{
+    color: red;
+  }
+  input{
+    text-align: center;
+  }
+  p{
+    margin: 0px;
+  }
+  h2{
+    font-family: ‘Black Han Sans’, sans-serif;
+    font-size: 20px;
+  }
+
+body{
+    text-align: center;
+}
+
+footer{
+    background-color: black;
+    padding: 20px;
+}
